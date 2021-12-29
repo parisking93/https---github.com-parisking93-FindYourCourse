@@ -22,5 +22,8 @@ namespace FindYourCourse
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+                // sevolessi usare un applicazione console 
+                // .ConfigureServices
     }
 }
