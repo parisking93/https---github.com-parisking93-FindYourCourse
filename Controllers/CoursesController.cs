@@ -7,11 +7,12 @@ namespace FindYourCourse.Controllers
     public class CoursesController : Controller
     {
         public IActionResult Index(){
-            return Content("sono index");
+            return View();
         }
 
         public IActionResult Details(string id){
-            return Content($"sono detail {id}");
+            ViewBag.numero = id;
+            return View();
         }
     }
 }
