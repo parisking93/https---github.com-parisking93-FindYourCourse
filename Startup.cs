@@ -18,7 +18,8 @@ namespace FindYourCourse
         {
             //* serve per il middleware del routing delle pagine
             // services.AddControllersWithViews();
-            services.AddMvc();
+            services.AddMvc()
+            .AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
