@@ -23,7 +23,7 @@ namespace FindYourCourse
                     webBuilder.UseStartup<Startup>();
                 });
 
-                // sevolessi usare un applicazione console 
+                // se volessi usare un applicazione console 
                 // .ConfigureServices
     }
 }

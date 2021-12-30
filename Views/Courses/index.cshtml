@@ -1,4 +1,36 @@
 
 
 sono un view2
-<h2>ciao 2</h2>
+<h2>ciao 2 @ViewBag.numero</h2>
+
+<div class="form"></div>
+<div class="form-group">
+    <label for="my-select">Text</label>
+    <select id="my-select" class="form-control" name="">
+        <option>Text</option>
+    </select>
+    <input id="my-input" type="hidden" name="" value="">
+    <div class="input-group">
+        <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+        <div class="input-group-append">
+            <span class="input-group-text" id="my-addon">Text</span>
+        </div>
+    </div>
+    <i class="fa fa-address-card" aria-hidden="true"></i>
+    <div class="d-flex flex-row">
+        <div class="col">
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox"> Text
+                </label>
+            </div>
+        </div>
+    </div>
+   <i class="fa fa-address-book" aria-hidden="true"></i>
+   <div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
+    <div class="custom-control custom-checkbox custom-control-inline">
+        <input id="my-input" class="custom-control-input" type="checkbox" name="" value="true">
+        <label for="my-input" class="custom-control-label">Text</label>
+    </div>
+   </div>
+</div>
