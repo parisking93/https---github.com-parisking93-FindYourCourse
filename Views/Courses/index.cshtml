@@ -1,36 +1,46 @@
 
+<div class="container">
+    <ul>
+        <li><a asp-action="Details" asp-controller="Courses" asp-route-id="5">Vai dettagli</a></li>
+    </ul>
+    <h2>Catalogo dei corsi</h2>
+    @for (int i=0; i<= 10 ; i++)
+    {
+            <div class="row">
+        <div class="col-md-2">
+            <img src="~/logo.png" alt="" class="w-100">
+        </div>
+        <div class="col-md-3">
+            <h2>Titolo</h2>
+            <auhtor>Nome autore</auhtor>
+        </div>
+        <div class="col-md-3">
+            @{
+                Random rand = new Random();
+                int numero = rand.Next(0,6);
+                int numeroMax = 5;
+            }
+            @for (int il = 0; il < numero ; il++)
+            {
+                <i class="fa fa-star text-warning" aria-hidden="true"></i>
+            }
+            @{
 
-sono un view2
-<h2>ciao 2 @ViewBag.numero</h2>
+                int nNumero = numeroMax - numero;
 
-<div class="form"></div>
-<div class="form-group">
-    <label for="my-select">Text</label>
-    <select id="my-select" class="form-control" name="">
-        <option>Text</option>
-    </select>
-    <input id="my-input" type="hidden" name="" value="">
-    <div class="input-group">
-        <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
-        <div class="input-group-append">
-            <span class="input-group-text" id="my-addon">Text</span>
+            }
+            @for (int il = 0; il < nNumero ; il++)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+        </div>
+        <div class="col-md-2">
+            EUR 10,99
+        </div>
+        <div class="col-md-2">
+            <a class="btn btn-primary" asp-controller="Courses" asp-action="Details" asp-route-id="5">Vai</a>
         </div>
     </div>
-    <i class="fa fa-address-card" aria-hidden="true"></i>
-    <div class="d-flex flex-row">
-        <div class="col">
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-primary">
-                    <input type="checkbox"> Text
-                </label>
-            </div>
-        </div>
-    </div>
-   <i class="fa fa-address-book" aria-hidden="true"></i>
-   <div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|}">
-    <div class="custom-control custom-checkbox custom-control-inline">
-        <input id="my-input" class="custom-control-input" type="checkbox" name="" value="true">
-        <label for="my-input" class="custom-control-label">Text</label>
-    </div>
-   </div>
+    }
+
 </div>

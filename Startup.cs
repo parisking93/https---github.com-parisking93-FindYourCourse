@@ -29,10 +29,12 @@ namespace FindYourCourse
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            // Middleware per Immagini o file dentro wwwroot
+            app.UseStaticFiles();
+            //
             app.UseRouting();
 
-
+            
 
             // app.UseEndpoints(endpoints =>
             // {
